@@ -4,21 +4,70 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
   <body>
-    <div>
-      <label for="user-distance">Insert-Distance</label>
-      <input type="text" distance="" id="user-distance" />
+    <!-- CALCULATE TICKET -->
+    <h1>CALCULATE YOUR TICKET</h1>
+    <div class="container-input">
+      <div class="row">
+        <div class="col">
+          <label for="user-name">Insert-Name</label>
+          <input placeholder="Name" type="text" distance="" id="user-name" />
+        </div>
+        <div class="col">
+          <label for="user-distance">Insert-Distance</label>
+          <input
+            placeholder="Distance"
+            type="text"
+            distance=""
+            id="user-distance" />
+        </div>
+        <div class="col">
+          <label for="user-age">Insert-Age</label>
+          <input placeholder="Age" type="text" age="" id="user-age" />
+        </div>
+      </div>
+      <div class="btns">
+        <button id="submit" type="button" name="button">Submit</button>
+        <button id="cancel" type="button" name="button">Cancel</button>
+      </div>
     </div>
-    <div>
-      <label for="user-age">Insert-Age</label>
-      <input type="text" age="" id="user-age" />
-    </div>
-    <div>
-      <button id="submit">Submit</button>
-    </div>
-    <h1>The PRICE of your ticket is...</h1>
+
+    <!-- OUTPUT TICKET -->
+    <section id="ticket" class="hidden">
+      <h2 class="hidden">YOUR TICKET</h2>
+      <div class="container-ticket">
+        <h4>DETAILS OF PASSENGER</h4>
+        <div class="row">
+          <div class="details-name">
+            <div class="col-name">
+              <h4>PASSENGER NAME</h4>
+              <p id="description-name">Name:</p>
+            </div>
+          </div>
+          <div class="details-ticket">
+            <div class="col">
+              <strong><p>Discount</p></strong>
+              <p id="description-offer">d</p>
+            </div>
+            <div class="col">
+              <strong><p>Carriage</p></strong>
+              <p id="description-cab">d</p>
+            </div>
+            <div class="col">
+              <strong><p>Cp code</p></strong>
+              <p id="description-cp">d</p>
+            </div>
+            <div class="col">
+              <strong><p>Price</p></strong>
+              <p id="description-price">d</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <script src="script.js"></script>
   </body>

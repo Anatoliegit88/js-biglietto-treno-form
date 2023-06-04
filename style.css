@@ -1,0 +1,61 @@
+body {
+  background-color: rgb(150, 127, 50);
+}
+h1,
+h2 {
+  text-align: center;
+}
+h4 {
+  margin: 0;
+  padding: 1rem;
+}
+.container-input,
+.container-ticket {
+  background-color: #fff;
+  width: 70%;
+  margin: 5rem auto;
+  border-radius: 30px;
+}
+.hidden {
+  opacity: 1;
+  transition: 0.1;
+}
+/* .show {
+  opacity: 1;
+} */
+.row {
+  display: flex;
+}
+.col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  justify-content: space-between;
+}
+.col input {
+  margin: 2rem;
+}
+.btns {
+  text-align: center;
+}
+.btns button {
+  margin: 2rem auto;
+}
+/* TICKET */
+.details-ticket {
+  display: flex;
+  width: 45rem;
+  justify-content: space-between;
+  border-top: 1px solid grey;
+}
+.col-name {
+  background-color: lightgray;
+  margin-left: 1rem;
+  padding: 1rem;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+}
+.col-name p {
+  padding-left: 1rem;
+}
