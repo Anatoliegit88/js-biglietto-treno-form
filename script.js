@@ -1,13 +1,13 @@
 const userNameInput = document.getElementById("user-name");
-const userDistanceInput = document.getElementById("user-distance");
+const userKmInput = document.getElementById("user-distance");
 const userAgeInput = document.getElementById("user-age");
 const button = document.getElementById("submit");
 
 //ELEMENTI HTML OUTPUT
 const title = document.querySelector("h2");
-const ticket = getElementById("ticket");
+const ticket = document.getElementById("ticket");
 const passengerName = document.getElementById("description-name");
-const offer = document.getElementById("description-offer");
+const offerApp = document.getElementById("description-offer");
 const cab = document.getElementById("description-cab");
 const cp = document.getElementById("description-cp");
 const price = document.getElementById("description-price");
@@ -16,17 +16,19 @@ const price = document.getElementById("description-price");
 //PRELIEVO DEI DATI
 button.addEventListener("click", function () {
   const userName = userNameInput.value;
-  const userDistance = userDistanceInput.value;
+  const userKm = parseInt(userKmInput.value);
   const userAge = userAgeInput.value;
 
   //IL CALCOLO
-  let kmPrice = 0.21;
-  if (userAge.value < 18) {
-    priceTicket = userDistance.value * kmPrice * 0.8;
+  const basePrice = userKm * 0.21;
+  let finalPrice = basePrice;
+  let offer = "No Discount";
+  if (userAge < 18) {
+    finalPrice = basePrice - (basePrice * 20) / 100;
+    offer = "Under 18";
   } else if (userAge >= 65) {
-    priceTicket = userDistance.value * kmPrice * 0.6;
-  } else {
-    priceTicket = userDistance.value * kmPrice;
+    finalPrice = basePrice - (basePrice * 40) / 100;
+    offer = "Over 65";
   }
 
   //GENERA NR. CARROZZA
@@ -37,13 +39,12 @@ button.addEventListener("click", function () {
   //OUTPUT
   const ticket = document.getElementById("ticket");
   ticket.classList.remove("hidden");
-  ticket.classList.add("show");
   passengerName.innerHTML = userName;
-  offer.innerHTML = userAge;
+  offerApp.innerHTML = offer;
   cab.innerHTML = cabNum;
   cp.innerHTML = cpCode;
-  price.innerHTML = kmPrice.toFixed(2);
-  title.innerHTML = `THE PRICE OF YOUR TICKET IS ${priceTicket.toFixed(
+  price.innerHTML = `${finalPrice.toFixed(2)} €`;
+  title.innerHTML = `THE PRICE OF YOUR TICKET IS ${finalPrice.toFixed(
     2
   )} EURO!`;
 });
