@@ -5,7 +5,7 @@ const button = document.getElementById("submit");
 
 //ELEMENTI HTML OUTPUT
 const title = document.querySelector("h2");
-const ticketContainer = getElementById("ticket");
+const ticket = getElementById("ticket");
 const passengerName = document.getElementById("description-name");
 const offer = document.getElementById("description-offer");
 const cab = document.getElementById("description-cab");
@@ -13,8 +13,8 @@ const cp = document.getElementById("description-cp");
 const price = document.getElementById("description-price");
 
 // SUL CLICK GENERA
+//PRELIEVO DEI DATI
 button.addEventListener("click", function () {
-  //PRELIEVO DEI DATI
   const userName = userNameInput.value;
   const userDistance = userDistanceInput.value;
   const userAge = userAgeInput.value;
@@ -35,7 +35,9 @@ button.addEventListener("click", function () {
   const cpCode = Math.floor(Math.random() * (9999 - 1000 + 1)) + 1000;
 
   //OUTPUT
-  ticketContainer.classList.remove("hidden");
+  const ticket = document.getElementById("ticket");
+  ticket.classList.remove("hidden");
+  ticket.classList.add("show");
   passengerName.innerHTML = userName;
   offer.innerHTML = userAge;
   cab.innerHTML = cabNum;

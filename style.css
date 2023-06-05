@@ -10,19 +10,20 @@ h4 {
   padding: 1rem;
 }
 .container-input,
-.container-ticket {
+.ticket {
   background-color: #fff;
   width: 70%;
   margin: 5rem auto;
   border-radius: 30px;
 }
 .hidden {
-  opacity: 1;
-  transition: 0.1;
+  opacity: 0;
+  transition: 0.1s;
 }
-/* .show {
+.show {
   opacity: 1;
-} */
+  transition: 0.1s;
+}
 .row {
   display: flex;
 }
