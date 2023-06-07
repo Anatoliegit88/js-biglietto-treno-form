@@ -2,7 +2,7 @@ body {
   background-color: rgb(150, 127, 50);
 }
 h1,
-h2 {
+h3 {
   text-align: center;
 }
 h4 {
@@ -13,12 +13,13 @@ h4 {
 .ticket {
   background-color: #fff;
   width: 70%;
-  margin: 5rem auto;
+  margin: 2rem auto;
   border-radius: 30px;
 }
 .hidden {
   opacity: 0;
   transition: 0.1s;
+  display: none;
 }
 .show {
   opacity: 1;
@@ -35,13 +36,13 @@ h4 {
   justify-content: space-between;
 }
 .col input {
-  margin: 2rem;
+  margin: 1.5rem;
 }
 .btns {
   text-align: center;
 }
 .btns button {
-  margin: 2rem auto;
+  margin: 1.5rem auto;
 }
 /* TICKET */
 .details-ticket {

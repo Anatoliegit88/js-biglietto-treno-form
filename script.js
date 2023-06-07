@@ -4,7 +4,7 @@ const userAgeInput = document.getElementById("user-age");
 const button = document.getElementById("submit");
 
 //ELEMENTI HTML OUTPUT
-const title = document.querySelector("h2");
+const title = document.querySelector("h3");
 const ticket = document.getElementById("ticket");
 const passengerName = document.getElementById("description-name");
 const offerApp = document.getElementById("description-offer");
@@ -37,6 +37,8 @@ button.addEventListener("click", function () {
   const cpCode = Math.floor(Math.random() * (9999 - 1000 + 1)) + 1000;
 
   //OUTPUT
+  const title = document.querySelector("h3");
+  title.classList.remove("hidden");
   const ticket = document.getElementById("ticket");
   ticket.classList.remove("hidden");
   passengerName.innerHTML = userName;
